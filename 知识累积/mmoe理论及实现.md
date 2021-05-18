@@ -1,5 +1,8 @@
 # mmoe理论及代码实现
 
+参考文章列表：
+1. https://zhuanlan.zhihu.com/p/291406172
+2. https://github.com/drawbridge/keras-mmoe/blob/master/mmoe.py
 
 ```python
 """
