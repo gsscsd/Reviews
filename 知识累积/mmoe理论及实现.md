@@ -4,6 +4,11 @@
 1. https://zhuanlan.zhihu.com/p/291406172
 2. https://github.com/drawbridge/keras-mmoe/blob/master/mmoe.py
 
+> 多任务学习中往往存在跷跷板现象，也就是说，多任务学习相对于多个单任务学习的模型，往往能够提升一部分任务的效果，同时牺牲另外部分任务的效果。即使通过MMoE这种方式减轻负迁移现象，跷跷板现象仍然是广泛存在的。
+
+![](https://pic1.zhimg.com/80/v2-7c909043d367b2bc3524d51f692feec8_720w.jpg)
+> MMOE(Multi-gate Mixture-of-Experts)是在MOE的基础上，使用了多个门控网络。
+
 ```python
 """
 Multi-gate Mixture-of-Experts model implementation.
@@ -15,7 +20,6 @@ Written by Alvin Deng
 from keras import backend as K
 from keras import activations, initializers, regularizers, constraints
 from keras.engine.topology import Layer, InputSpec
-
 
 class MMoE(Layer):
     """
